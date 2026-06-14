@@ -1,0 +1,22 @@
+{
+  "name": "receiptwell",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eval": "tsx eval/run-eval.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@google/genai": "^2.8.0",
+    "@supabase/supabase-js": "^2.108.1",
+    "dotenv": "^17.4.2",
+    "sharp": "^0.35.1",
+    "tsx": "^4.22.4",
+    "zod": "^4.4.3"
+  }
+}

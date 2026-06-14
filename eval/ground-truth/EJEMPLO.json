@@ -1,0 +1,31 @@
+{
+  "total_boleta": 15990,
+  "n_productos": 5,
+  "productos": [
+    {
+      "nombre_contiene": "Leche",
+      "precio": 1290,
+      "nova_esperado": 1
+    },
+    {
+      "nombre_contiene": "Yogur",
+      "precio": 990,
+      "nova_esperado": 4
+    },
+    {
+      "nombre_contiene": "Arroz",
+      "precio": 2490,
+      "nova_esperado": 1
+    },
+    {
+      "nombre_contiene": "Coca",
+      "precio": 1490,
+      "nova_esperado": 4
+    },
+    {
+      "nombre_contiene": "Marraqueta",
+      "precio": 1200,
+      "nova_esperado": 3
+    }
+  ]
+}
