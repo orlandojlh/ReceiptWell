@@ -32,7 +32,7 @@ export async function createLemonCheckout(
   const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 
   const { data, error } = await createCheckout(
-    process.env.LEMONSQUEEZY_STORE_ID!,
+    process.env.NEXT_PUBLIC_LEMON_STORE_ID!,
     variantId,
     {
       checkoutData: {
