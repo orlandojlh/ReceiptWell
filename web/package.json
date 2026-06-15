@@ -15,7 +15,6 @@
     "next": "16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "sharp": "^0.35.1",
     "zod": "^4.4.3"
   },
   "devDependencies": {
@@ -25,8 +24,5 @@
     "@types/react-dom": "^19",
     "tailwindcss": "^4",
     "typescript": "^5"
-  },
-  "optionalDependencies": {
-    "@img/sharp-linux-x64": "^0.35.1"
   }
 }

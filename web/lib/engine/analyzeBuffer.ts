@@ -5,30 +5,15 @@
  */
 
 import { GoogleGenAI } from "@google/genai";
-import sharp from "sharp";
 import { ResultadoSchema, type Resultado } from "@/lib/motor";
 import { PROMPT_EXTRACT_V2 } from "@/lib/prompts/extract-v2";
 
 const MODEL = "gemini-2.5-flash";
-const MAX_SIZE_BYTES = 4 * 1024 * 1024;
-const MAX_DIMENSION = 1600;
 
-async function prepareBuffer(
+function prepareBuffer(
   buf: Buffer,
   mimeType: string
-): Promise<{ data: string; mimeType: string }> {
-  if (mimeType === "application/pdf") {
-    return { data: buf.toString("base64"), mimeType };
-  }
-
-  if (buf.length > MAX_SIZE_BYTES) {
-    const resized = await sharp(buf)
-      .resize(MAX_DIMENSION, MAX_DIMENSION, { fit: "inside", withoutEnlargement: true })
-      .jpeg({ quality: 85 })
-      .toBuffer();
-    return { data: resized.toString("base64"), mimeType: "image/jpeg" };
-  }
-
+): { data: string; mimeType: string } {
   return { data: buf.toString("base64"), mimeType };
 }
 
