@@ -1,5 +1,11 @@
 import { z } from "zod";
 
+const CategoriaProducto = z.enum([
+  "frutas", "verduras", "lacteos", "carnes", "embutidos",
+  "snacks", "bebidas", "panaderia", "abarrotes", "congelados",
+  "limpieza", "higiene", "mascotas", "otros",
+]);
+
 const ProductoSchema = z.object({
   nombre: z.string(),
   nombre_boleta: z.string(),
@@ -7,8 +13,10 @@ const ProductoSchema = z.object({
   cantidad: z.number(),
   categoria_nova: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4)]),
   confianza_nova: z.union([z.literal("alta"), z.literal("media"), z.literal("baja")]),
+  nova_justificacion: z.string().optional(),
   calorias_estimadas: z.number().int(),
   es_alimento: z.boolean(),
+  categoria: CategoriaProducto.optional(),
 });
 
 const TotalesSchema = z.object({
